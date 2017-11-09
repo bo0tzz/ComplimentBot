@@ -27,7 +27,7 @@ public class ComplimentBotListener implements Listener {
                         .inputMessageContent(InputTextMessageContent.builder().messageText(compliment).build())
                         .title(compliment)
                         .build())
-                .cache_time(1)
+                .cacheTime(1)
                 .build());
     }
 

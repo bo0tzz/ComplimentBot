@@ -9,14 +9,12 @@ public class ComplimentBot {
     public final TelegramBot bot;
 
     public static void main(String[] args) {
-        new ComplimentBot(args[0]);
-        while (true) {
-            try {
-                Thread.sleep(100000);
-            } catch (InterruptedException e) {
-                //Lol just keep going
-            }
+        String token = System.getenv("BOT_KEY");
+        if (token == null || token.equals("")) {
+            System.out.println("Supply a token!");
+            System.exit(1);
         }
+        new ComplimentBot(token);
     }
 
     public ComplimentBot(String token) {
